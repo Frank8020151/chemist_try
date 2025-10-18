@@ -3,7 +3,7 @@
 An AI that can play chemical turtle soup with you. Through this, you can learn some chemical knowledge.
 
 ## Download
-Leave blank
+<a href="https://github.com/Frank8020151/chemist_try/releases/tag/chemist_try_v0.2.0_alpha">Click here to download</a>
 
 ## Quick Start
 Fill in your **api_key** and **base_api** in the **Main.py** and **tools.py** files, then run **Main.py** to use.
@@ -23,7 +23,7 @@ In actual tests, **Qwen2.5-72B-Instruct-GGUF** has an error rate of less than **
 一个可以和你玩化学海龟汤的ai，通过此，您可以学习一些化学知识
 
 ## 下载
-留空
+<a href="https://github.com/Frank8020151/chemist_try/releases/tag/chemist_try_v0.2.0_alpha">点击下载</a>
 
 ## 快速开始
 在**Main.py**和**tools.py**文件中填写你的**api_key**和**base_api**并启动**Main.py**即可使用。
