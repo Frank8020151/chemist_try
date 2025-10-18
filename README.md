@@ -1,3 +1,24 @@
+# English
+# chemist_try
+An AI that can play chemical turtle soup with you. Through this, you can learn some chemical knowledge.
+
+## Download
+Leave blank
+
+## Quick Start
+Fill in your **api_key** and **base_api** in the **Main.py** and **tools.py** files, then run **Main.py** to use.
+
+**Model requirements:**
+
+1. Support tool invocation
+
+2. Text generation
+
+3. No thinking
+
+## Response accuracy
+In actual tests, **Qwen2.5-72B-Instruct-GGUF** has an error rate of less than **5%**. Using a more advanced model should improve performance significantly.
+# 中文
 # chemist_try
 一个可以和你玩化学海龟汤的ai，通过此，您可以学习一些化学知识
 
