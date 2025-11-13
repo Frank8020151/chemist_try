@@ -8,7 +8,7 @@ import set
 
 client2 = OpenAI(
     api_key = "YOUR_API_KEY",
-    base_url = "YOUR_URL",
+    base_url = "YOUR_BASE_URL",
 )
 
 
@@ -27,12 +27,12 @@ def choose_chemical(requirement: str="无") -> str:
     requirement:对于选择化学式的要求
     """
     flag = True
-    result = ""
+    result = "1"
     while flag:
         flag = False
         try:
             completion = client2.chat.completions.create(
-                model="YOUR_MODEL",
+                model="YOUR_MODEL_NAME",
                 messages=[
                     chooser_sys_prompt,
                     {"role": "user", "content": f"随机选取一个化学物质，要求如下：{requirement}，不能生成以下物质：{ban}"},
@@ -44,9 +44,12 @@ def choose_chemical(requirement: str="无") -> str:
             ban.append(result)
             if len(ban) >= 8:
                 ban.pop(0)
-            print("工具调用成功！")
+            #if settings.debug:
+            #    print("工具调用成功！")
         except openai.RateLimitError:
             flag = True
+            return "error"
+    #print("Debug:"+result)
     return result
 
 

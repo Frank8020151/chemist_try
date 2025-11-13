@@ -1,14 +1,65 @@
+import base64
+import sys
 import tkinter
 import threading
+import os
 
 import openai
 
 import Main
+import record_radio
+
+
+if getattr(sys, "frozen", False):
+    fgD = sys._MEIPASS
+else:
+    fgD = os.path.dirname(os.path.abspath(__file__))
+
+
+import whisper
+
+
+rd = record_radio.RecordRadio("chemistTemp/temp.wav")
+
+STTModel = whisper.load_model("small")
 
 
 def test01():
     for i in range(60):
         messagesText.insert(tkinter.END, "TEST"+'\n', "USER")
+
+
+def startR():
+    rd.start_record()
+    STTButton.config(command=stopR, text="停止录音")
+
+
+def setT():
+    textTemp = STTModel.transcribe("chemistTemp/temp.wav", task="transcribe")
+    inputEntry.insert(tkinter.END, textTemp["text"])
+    STTButton.config(command=startR, text="语音识别", state=tkinter.NORMAL)
+
+
+def stopR():
+    rd.stop_record()
+    STTButton.config(command=startR, text="正在识别", state=tkinter.DISABLED)
+    STT = threading.Thread(target=setT)
+    STT.start()
+
+
+def change_api():
+    if apiKeyEntry.get() == "" or baseUrlEntry.get() == "" or aiModelNameEntry.get() == "":
+        Main.user_model_name = "YOUR_MODEL_NAME"
+        Main.client = openai.OpenAI(
+            api_key="API_KEY",
+            base_url="YOUR_BASE_URL",
+        )
+        return
+    Main.user_model_name = aiModelNameEntry.get()
+    Main.client = openai.OpenAI(
+        api_key = apiKeyEntry.get(),
+        base_url = baseUrlEntry.get(),
+    )
 
 
 def chat_to_ai():
@@ -34,7 +85,7 @@ def chat_to_ai():
             #AIMessageLabel = tkinter.Label(cv, text="AI:" + ans, background="#E1FFFF")
             #AIMessageLabel.pack(anchor="nw")
             messagesText.config(state=tkinter.NORMAL)
-            messagesText.insert(tkinter.END, "AI:" + ans + '\n', "AI")
+            messagesText.insert(tkinter.END, "AI("+Main.user_model_name+"):" + ans + '\n', "AI")
             messagesText.config(state=tkinter.DISABLED)
         except openai.RateLimitError:
             flag = True
@@ -47,6 +98,10 @@ def start_thread():
 
 
 if __name__ == '__main__':
+    if not os.path.exists("chemistTemp"):
+        os.makedirs("chemistTemp")
+
+
     root = tkinter.Tk()
 
 
@@ -81,6 +136,8 @@ if __name__ == '__main__':
 
     inputEntry = tkinter.Entry(inputFrame, width=100)
 
+    STTButton = tkinter.Button(inputFrame, text='语音识别', command=startR)
+
     submitButton = tkinter.Button(inputFrame, text='发送', command=start_thread)
 
 
@@ -92,14 +149,16 @@ if __name__ == '__main__':
     #cvScrollbar.pack(side='right', fill="y")
     messagesScrollbar.pack(side="right")
 
-    inputEntry.pack(side="bottom")
+    STTButton.pack(side="right")
 
     submitButton.pack(side="right")
+
+    inputEntry.pack(side="bottom")
 
     inputFrame.pack(side="bottom")
 
     #test01()
-    """
+
     apiFrame = tkinter.Frame(root)
     apiFrame.pack(anchor="se")
 
@@ -123,7 +182,7 @@ if __name__ == '__main__':
     aiModelNameLabel.pack(side="left")
     aiModelNameEntry = tkinter.Entry(aiModelNameFrame)
     aiModelNameEntry.pack(side="left")
-    apiButton = tkinter.Button(apiFrame, text="提交")
+    apiButton = tkinter.Button(apiFrame, text="提交", command=change_api)
     apiButton.pack(side="left", expand=True)
-    """
+
     root.mainloop()
