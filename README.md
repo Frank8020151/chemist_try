@@ -6,8 +6,13 @@ It includes an agent that can select a chemical element, and then the user can a
 <a href="https://github.com/Frank8020151/chemist_try/releases/tag/chemist_try_v0.3.0_Beta">Click to download</a>
 
 ## Quick Start
-Fill in your **api_key** and **base_api** in the **Main.py** and **tools.py** files, then run **Chemist_try.py** to use.
-
+before this,you need to ensure that your operating system is Windows.
+If you use source code
+1.pip install -r requirement.txt
+2.install ffmpeg.exe
+3.Fill in your **api_key** and **base_api** in the **Main.py** and **tools.py** files, then run **Chemist_try.py** to use.
+If you use .exe
+only run it!
 **Model requirements:**
 
 1. Support for tool invocation
@@ -25,7 +30,13 @@ Cannot connect: Possibly no internet connection
 <a href="https://github.com/Frank8020151/chemist_try/releases/tag/chemist_try_v0.3.0_Beta">点击下载</a>
 
 ## 快速开始
-在**Main.py**和**tools.py**文件中填写你的**api_key**和**base_api**并启动**Chemist_try.py**即可使用。
+在此之前，您需要确保您的操作系统是Windows。
+如果您使用源代码
+1. pip install -r requirement.txt
+2. 安装 ffmpeg.exe
+3. 在 **Main.py** 和 **tools.py** 文件中填写您的 **api_key** 和 **base_api**，然后运行 **Chemist_try.py** 以使用。
+如果您使用 .exe
+只需运行它！
 
 **模型要求：**
 
