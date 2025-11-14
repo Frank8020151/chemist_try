@@ -113,8 +113,8 @@ try:
             return "连接不到API"
         except openai.PermissionDeniedError:
             return "联系不到API"
-        except:
-            return "未知错误"
+        #except:
+        #    return "未知错误"
 
 
 
@@ -147,5 +147,5 @@ except openai.APIConnectionError:
     print("无法连接，请检查网络后再试")
 except openai.PermissionDeniedError:
     print("联系不到API")
-except:
-    print("未知错误")
+#except:
+#    print("未知错误")

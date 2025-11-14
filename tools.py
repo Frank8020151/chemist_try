@@ -6,6 +6,8 @@ from openai import OpenAI
 import set
 
 
+user_model_name = "YOUR_MODEL_NAME"
+
 client2 = OpenAI(
     api_key = "YOUR_API_KEY",
     base_url = "YOUR_BASE_URL",
@@ -32,7 +34,7 @@ def choose_chemical(requirement: str="无") -> str:
         flag = False
         try:
             completion = client2.chat.completions.create(
-                model="YOUR_MODEL_NAME",
+                model=user_model_name,
                 messages=[
                     chooser_sys_prompt,
                     {"role": "user", "content": f"随机选取一个化学物质，要求如下：{requirement}，不能生成以下物质：{ban}"},

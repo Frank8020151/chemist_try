@@ -7,21 +7,25 @@ import os
 import openai
 
 import Main
+import tools
 import record_radio
 
 
 if getattr(sys, "frozen", False):
-    fgD = sys._MEIPASS
+    ffmpegF = sys._MEIPASS
+    STTModelF = sys._MEIPASS
 else:
-    fgD = os.path.dirname(os.path.abspath(__file__))
+    ffmpegF = os.path.dirname(os.path.abspath(__file__))
+    STTModelF = os.path.dirname(os.path.abspath(__file__))
 
+os.environ["PATH"] = ffmpegF + ";" + os.environ["PATH"]
 
 import whisper
 
 
 rd = record_radio.RecordRadio("chemistTemp/temp.wav")
 
-STTModel = whisper.load_model("small")
+STTModel = whisper.load_model(STTModelF + "/models/small.pt")
 
 
 def test01():
@@ -56,7 +60,12 @@ def change_api():
         )
         return
     Main.user_model_name = aiModelNameEntry.get()
+    tools.user_model_name = aiModelNameEntry.get()
     Main.client = openai.OpenAI(
+        api_key = apiKeyEntry.get(),
+        base_url = baseUrlEntry.get(),
+    )
+    tools.client2 = openai.OpenAI(
         api_key = apiKeyEntry.get(),
         base_url = baseUrlEntry.get(),
     )
