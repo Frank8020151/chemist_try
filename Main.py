@@ -109,10 +109,11 @@ try:
             if len(past_message) > settings.past_message_number:
                 past_message = past_message[-settings.past_message_number:]
             return result
-        except openai.APIConnectionError:
-            return "连接不到API"
-        except openai.PermissionDeniedError:
-            return "联系不到API"
+        finally: pass
+        #except openai.APIConnectionError:
+            #return "连接不到API"
+        #except openai.PermissionDeniedError:
+            #return "联系不到API"
         #except:
         #    return "未知错误"
 
