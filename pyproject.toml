@@ -1,5 +1,5 @@
 [project]
-name = "chemist-try"
+name = "chemist-try(web)"
 version = "1.0.0"
 dependencies = [
     "altgraph==0.17.4",
@@ -26,7 +26,6 @@ dependencies = [
     "tqdm==4.67.1",
     "typing-inspection==0.4.1",
     "typing_extensions==4.14.1",
-    "PyAudio==0.2.14",
     "openai-whisper==20250625",
     "Flask==3.1.2",
     "whisper==1.1.10",
