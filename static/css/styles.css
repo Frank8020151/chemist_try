@@ -1,26 +1,34 @@
+.body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #0a144c, #240053);
+}
+
 .scroll-box{
     width: 90vw;
     height: 70vh;
-    border: 2px solid #0066aa;
+    margin: 1vh auto auto;
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    box-shadow: 0 0 10px #0088ff, 0 0 20px #0088ff;
     overflow-x: auto;
     overflow-y: auto;
+    transition: box-shadow 800ms;
 }
-
-#ipt{
-    width: 80vw;
-    height: 15vh;
-    font-size: 4mm;
-    font-family:
-        "Segoe UI", "Microsoft YaHei",
-        "PingFang SC", "Hiragino Sans GB",
-        "Helvetica Neue", Helvetica, Arial,
-        "Noto Sans", "WenQuanYi Micro Hei",
-        sans-serif;
+.scroll-box:hover{
+    box-shadow: 0 0 10px #8a4cae, 0 0 20px #8a4cae, 0 0 30px #8a4cae;
 }
 
 #api_key{
     width: 20vw;
     height: 5vh;
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    border: none;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    color: white;
     font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
@@ -28,11 +36,19 @@
         "Helvetica Neue", Helvetica, Arial,
         "Noto Sans", "WenQuanYi Micro Hei",
         sans-serif;
+    transition: box-shadow 800ms;
+}
+#api_key:focus{
+    box-shadow: 0 0 10px #4cae4c, 0 0 20px #4cae4c, 0 0 30px #4cae4c;
 }
 
 #base_url{
     width: 20vw;
     height: 5vh;
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    border: none;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    color: white;
     font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
@@ -40,11 +56,19 @@
         "Helvetica Neue", Helvetica, Arial,
         "Noto Sans", "WenQuanYi Micro Hei",
         sans-serif;
+    transition: box-shadow 800ms;
+}
+#base_url:focus{
+    box-shadow: 0 0 10px #4cae4c, 0 0 20px #4cae4c, 0 0 30px #4cae4c;
 }
 
 #model_name{
     width: 20vw;
     height: 5vh;
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    border: none;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    color: white;
     font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
@@ -52,11 +76,86 @@
         "Helvetica Neue", Helvetica, Arial,
         "Noto Sans", "WenQuanYi Micro Hei",
         sans-serif;
+    transition: box-shadow 800ms;
+}
+#model_name:focus{
+    box-shadow: 0 0 10px #4cae4c, 0 0 20px #4cae4c, 0 0 30px #4cae4c;
+}
+
+#submitChange{
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    border: none;
+    box-shadow: 0 0 10px #0088ff, 0 0 20px #0088ff;
+}
+#submitChange:hover{
+    box-shadow: 0 0 10px #4cae4c, 0 0 20px #4cae4c, 0 0 30px #4cae4c;
+}
+
+#input-box{
+    position: absolute;
+    bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 15vh;
+}
+
+#ipt{
+    display: flex;
+    flex: 4;
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    border: none;
+    box-shadow: 0 0 10px #0088ff, 0 0 20px #0088ff;
+    color: white;
+    min-width: 0;
+    font-size: 4mm;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+    transition: box-shadow 800ms, flex 800ms;
+}
+#ipt:focus{
+    flex: 6;
+    box-shadow: 0 0 10px #4cae4c, 0 0 20px #4cae4c, 0 0 30px #4cae4c;
+}
+
+#button-box{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+#set_api_button{
+    flex: 1;
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    border: none;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    color: white;
+    font-size: 4mm;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+    transition: box-shadow 800ms, flex 800ms ease-out;
+}
+#set_api_button:hover{
+    flex: 4;
+    box-shadow: 0 0 10px #4cae4c, 0 0 20px #4cae4c, 0 0 30px #4cae4c;
 }
 
 #post-button{
-    width: 5vw;
-    height: 5vh;
+    flex: 1;
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    border: none;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    color: white;
     font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
@@ -64,11 +163,20 @@
         "Helvetica Neue", Helvetica, Arial,
         "Noto Sans", "WenQuanYi Micro Hei",
         sans-serif;
+    transition: box-shadow 800ms, flex 800ms ease-out;
+}
+#post-button:hover{
+    flex: 4;
+    box-shadow: 0 0 10px #4cae4c, 0 0 20px #4cae4c, 0 0 30px #4cae4c;
 }
 
 #submit{
     width: 5vw;
     height: 5vh;
+    background-image: linear-gradient(to bottom right, #310037, #080023);
+    border: none;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    color: white;
     font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
@@ -76,26 +184,33 @@
         "Helvetica Neue", Helvetica, Arial,
         "Noto Sans", "WenQuanYi Micro Hei",
         sans-serif;
+    transition: box-shadow 800ms, flex 800ms ease-out;
+}
+#submit:hover{
+    flex: 4;
+    box-shadow: 0 0 10px #4cae4c, 0 0 20px #4cae4c, 0 0 30px #4cae4c;
 }
 
 .user-input{
     font-size: 4mm;
-    color: #2b542c;
+    color: #ffd700;
     font-family:
         "Segoe UI", "Microsoft YaHei",
         "PingFang SC", "Hiragino Sans GB",
         "Helvetica Neue", Helvetica, Arial,
         "Noto Sans", "WenQuanYi Micro Hei",
         sans-serif;
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
 }
 
 .ai-output{
     font-size: 4mm;
-    color: #285e8e;
+    color: #55a7f3;
     font-family:
         "Segoe UI", "Microsoft YaHei",
         "PingFang SC", "Hiragino Sans GB",
         "Helvetica Neue", Helvetica, Arial,
         "Noto Sans", "WenQuanYi Micro Hei",
         sans-serif;
+    text-shadow: 0 0 10px #55a7f3, 0 0 20px #55a7f3, 0 0 30px #55a7f3;
 }
