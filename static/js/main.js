@@ -8,6 +8,7 @@ async function post_to_ai(){
     button.disabled = true
     button.textContent = 'AI回答中';
     input_box.value = ''
+    new_para.className = 'user-input'
     new_para.appendChild(node)
     parent.appendChild(new_para)
     var response = await fetch("/api/chat", {
@@ -22,6 +23,7 @@ async function post_to_ai(){
     var data = await response.json()
     node = document.createTextNode('AI: '+data.message);
     new_para = document.createElement("p");
+    new_para.className = 'ai-output'
     new_para.appendChild(node)
     parent.appendChild(new_para)
     button.textContent = '发送'

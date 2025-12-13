@@ -8,17 +8,17 @@
     </head>
     <body>
         <dir class="scroll-box" id="message-box">
-            <p>嗨，我是一个可以和你一起游玩化学海龟汤的ai智能体，试着说：“开始游戏”</p>
+            <p class="ai-output">嗨，我是一个可以和你一起游玩化学海龟汤的ai智能体，试着说：“开始游戏”</p>
         </dir>
         <dir>
-            <textarea cols="100" rows="5" placeholder="点击输入文本" id="ipt"></textarea>
+            <textarea placeholder="点击输入文本" id="ipt"></textarea>
             <button onclick="post_to_ai()" id="post-button">发送</button>
         </dir>
         <dir>
             <input type="password" id="api_key" placeholder="自定义api_key">
             <input type="url" id="base_url" placeholder="自定义base_url">
             <input id="model_name" placeholder="自定义model_name">
-            <button onclick="change_client()">确定</button>
+            <button onclick="change_client()" id="submit">确定</button>
         </dir>
     </body>
 </html>

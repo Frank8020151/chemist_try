@@ -1,7 +1,101 @@
 .scroll-box{
-    width: 1000px;
-    height: 400px;
+    width: 90vw;
+    height: 70vh;
     border: 2px solid #0066aa;
     overflow-x: auto;
     overflow-y: auto;
+}
+
+#ipt{
+    width: 80vw;
+    height: 15vh;
+    font-size: 1vw;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+}
+
+#api_key{
+    width: 20vw;
+    height: 5vh;
+    font-size: 1vw;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+}
+
+#base_url{
+    width: 20vw;
+    height: 5vh;
+    font-size: 1vw;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+}
+
+#model_name{
+    width: 20vw;
+    height: 5vh;
+    font-size: 1vw;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+}
+
+#post-button{
+    width: 5vw;
+    height: 5vh;
+    font-size: 1vw;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+}
+
+#submit{
+    width: 5vw;
+    height: 5vh;
+    font-size: 1vw;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+}
+
+.user-input{
+    font-size: 1vw;
+    color: #2b542c;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
+}
+
+.ai-output{
+    font-size: 1vw;
+    color: #285e8e;
+    font-family:
+        "Segoe UI", "Microsoft YaHei",
+        "PingFang SC", "Hiragino Sans GB",
+        "Helvetica Neue", Helvetica, Arial,
+        "Noto Sans", "WenQuanYi Micro Hei",
+        sans-serif;
 }
