@@ -9,7 +9,7 @@
 #ipt{
     width: 80vw;
     height: 15vh;
-    font-size: 10px;
+    font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
         "PingFang SC", "Hiragino Sans GB",
@@ -21,7 +21,7 @@
 #api_key{
     width: 20vw;
     height: 5vh;
-    font-size: 10px;
+    font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
         "PingFang SC", "Hiragino Sans GB",
@@ -33,7 +33,7 @@
 #base_url{
     width: 20vw;
     height: 5vh;
-    font-size: 10px;
+    font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
         "PingFang SC", "Hiragino Sans GB",
@@ -45,7 +45,7 @@
 #model_name{
     width: 20vw;
     height: 5vh;
-    font-size: 10px;
+    font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
         "PingFang SC", "Hiragino Sans GB",
@@ -57,7 +57,7 @@
 #post-button{
     width: 5vw;
     height: 5vh;
-    font-size: 10px;
+    font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
         "PingFang SC", "Hiragino Sans GB",
@@ -69,7 +69,7 @@
 #submit{
     width: 5vw;
     height: 5vh;
-    font-size: 10px;
+    font-size: 4mm;
     font-family:
         "Segoe UI", "Microsoft YaHei",
         "PingFang SC", "Hiragino Sans GB",
@@ -79,7 +79,7 @@
 }
 
 .user-input{
-    font-size: 10px;
+    font-size: 4mm;
     color: #2b542c;
     font-family:
         "Segoe UI", "Microsoft YaHei",
@@ -90,7 +90,7 @@
 }
 
 .ai-output{
-    font-size: 10px;
+    font-size: 4mm;
     color: #285e8e;
     font-family:
         "Segoe UI", "Microsoft YaHei",
