@@ -1,5 +1,5 @@
 [project]
-name = "chemist-try(web)"
+name = "chemist-try-web"
 version = "1.0.0"
 dependencies = [
     "altgraph==0.17.4",
