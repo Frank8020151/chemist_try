@@ -11,6 +11,7 @@ async function post_to_ai(){
     new_para.className = 'user-input'
     new_para.appendChild(node)
     parent.appendChild(new_para)
+    await change_client()
     var response = await fetch("/api/chat", {
         method: "POST",
         headers: {
