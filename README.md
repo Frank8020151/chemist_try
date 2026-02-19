@@ -8,7 +8,7 @@ It includes an agent that can select a chemical element, and then the user can a
 ## Quick Start
 before this,you need to ensure that your operating system is Windows.
 If you use source code
-1.pip install -r requirement.txt
+1.pip install -r requirements.txt
 2.install ffmpeg.exe
 3.Fill in your **api_key** and **base_api** in the **Main.py** and **tools.py** files, then run **Chemist_try.py** to use.
 If you use .exe
@@ -22,6 +22,7 @@ only run it!
 ## Exception Handling:
 Unable to connect to API: Check if your API_KEY is valid  
 Cannot connect: Possibly no internet connection
+Automatic requires installation failed: Manual installation required
 # 中文
 # chemist_try
 其中包含了一个智能体，此智能体可以选出一个化学元素，然后用户可以提问问题来缩小答案的范围，但ai只能回答是或不是，最后猜出答案
@@ -32,7 +33,7 @@ Cannot connect: Possibly no internet connection
 ## 快速开始
 在此之前，您需要确保您的操作系统是Windows。
 如果您使用源代码
-1. pip install -r requirement.txt
+1. pip install -r requirements.txt
 2. 安装 ffmpeg.exe
 3. 在 **Main.py** 和 **tools.py** 文件中填写您的 **api_key** 和 **base_api**，然后运行 **Chemist_try.py** 以使用。
 如果您使用 .exe
@@ -47,4 +48,5 @@ Cannot connect: Possibly no internet connection
 ## 异常处理：
 连接不到API：检查自己的API_KEY是否可用
 无法连接：可能是没有连接网络
+自动安装依赖失败：手动安装
 
